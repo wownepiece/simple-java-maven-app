@@ -17,6 +17,11 @@ pipeline {
         sh 'mvn test'
       }
     }
+    stage('Delivery') {
+      steps {
+        sh './jenkins/scripts/deliver.sh'
+      }
+    }
   }
   environment {
     DATE = '5thJan'
