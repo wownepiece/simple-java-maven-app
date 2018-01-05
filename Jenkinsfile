@@ -15,7 +15,6 @@ pipeline {
     stage('Test') {
       steps {
         sh 'mvn test'
-        junit 'target/surefile-reports/*.xml'
       }
     }
   }
